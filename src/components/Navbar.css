@@ -1,0 +1,161 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    background: black;
+    opacity: 0.85;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Sticky position */
+    top: 0; /* Ensures it sticks to the top */
+    left: 0; /* Ensures it spans the full width */
+    width: 100%; /* Ensures the navbar spans the full width of the page */
+    z-index: 10; /* Keeps navbar on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for better visibility */
+}
+
+/* Navbar container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Logo styling */
+.navbar-logo img {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Mobile menu icon (hamburger) */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-links {
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-links:hover {
+    background-color: #4682B4;
+    border-radius: 5px;
+    color: white;
+}
+
+.nav-button {
+    background-color: #4682B4;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: #4682B4;
+    border: 1px solid #4682B4;
+}
+
+/* Mobile Menu */
+@media screen and (max-width: 960px) {
+    .menu-icon {
+        display: block;
+    }
+
+    /* Adjust menu behavior for mobile */
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px; /* Pushes the menu below the navbar */
+        left: -100%;
+        background: black;
+        opacity: 0.95;
+        transition: all 0.5s ease;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .nav-links {
+        padding: 10px;
+        width: 100%;
+        display: block;
+        font-size: 1.2rem; /* Ensures that the links are easily readable */
+    }
+
+    .nav-button {
+        margin-top: 10px;
+        text-align: center;
+        display: inline-block;
+        width: auto;
+    }
+
+    /* Make the navbar logo a bit smaller for mobile */
+    .navbar-logo img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-links {
+        font-size: 1rem; /* Adjust font size for very small screens */
+        padding: 8px 15px;
+    }
+
+    .nav-button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .menu-icon {
+        font-size: 2rem;
+    }
+
+    .navbar-container {
+        padding: 0 10px;
+    }
+}

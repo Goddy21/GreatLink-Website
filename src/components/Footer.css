@@ -1,0 +1,90 @@
+/* Reset styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+/* General layout to ensure content occupies full height */
+body, html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Home container to make the footer stick to the bottom */
+.home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures content takes full viewport height */
+}
+
+/* Main content */
+.content {
+    flex-grow: 1; /* Allows content area to take remaining space */
+}
+
+/* Footer styles */
+.footer-div {
+    background-color: #000;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+}
+
+.footer-div p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff7043;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff7043;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .footer-div {
+        padding: 2rem 1rem;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+}
