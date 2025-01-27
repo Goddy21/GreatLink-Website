@@ -56,7 +56,7 @@ body, html {
 }
 
 .social-icons a:hover {
-    color: #ff7043;
+    color: dodgerblue;
 }
 
 .footer-links {
@@ -71,7 +71,7 @@ body, html {
 }
 
 .footer-links a:hover {
-    color: #ff7043;
+    color: dodgerblue;
 }
 
 /* Media Query for smaller screens */

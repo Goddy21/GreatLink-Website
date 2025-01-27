@@ -15,7 +15,7 @@ const Home = () => {
 
                     <h1>Welcome to Greatlink Company Limited</h1>
                     <p>Your One-Stop Solution for Computer and Engineering Services</p>
-                    <Link className="get_started" to='/sign_up'>
+                    <Link className="get_started" to='/signup'>
                         Get Started
                     </Link>
                 </div>
@@ -84,6 +84,7 @@ const Home = () => {
                 <div className="call-to-action">
                     <h2>Ready to Work With Us?</h2>
                     <p>Contact us today to get the best solutions for your business or personal needs.</p>
+                    <br />
                     <br />
                     <Link className="contact-btn" to='/contact'>
                         Contact Us

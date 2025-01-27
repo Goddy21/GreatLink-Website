@@ -55,7 +55,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/sign_in" className="nav-button" onClick={closeMobileMenu}>
+                        <Link to="/signin" className="nav-button" onClick={closeMobileMenu}>
                             Sign In
                         </Link>
                     </li>
