@@ -26,7 +26,7 @@ const servicesData = [
         id: 2, 
         name: "Solar Panels and Consumer units", 
         images: [
-            "/images/conunit1.jpg",
+            "/images/conunit.jpg",
             "/images/conunit2.jpg",
             "/images/solar.jpg",
             "/images/solar2.jpg"
@@ -63,9 +63,10 @@ const servicesData = [
             "/images/computer2.jpg",
             "/images/printer1.jpg",
             "/images/printer2.jpg",
-            "/images/printer3.jpg",
+            "/images/ploter1.jpg",
             "/images/server1.jpg",
             "/images/server2.jpg",
+            "/images/plotter2.jpg",
         ],
         details: "We provide expert repairs for Computers, Servers and Printers.",
         moreInfo: "Our skilled technicians handle both all kinds of computers, servers and printers, offering troubleshooting and maintenance services."
@@ -76,7 +77,7 @@ const servicesData = [
         images: [
             "/images/projector1.jpg",
             "/images/projector2.jpg",
-            "/images/ups1.jpg",
+            "/images/ups.jpg",
             "/images/ups2.jpg"
         ],
         details: "We provide expert repairs for Projectors and UPS machines.",
@@ -92,6 +93,29 @@ const servicesData = [
         ],
         details: "We provide expert installations and maintenance for network systems",
         moreInfo: "Our skilled technicians handle both all network installations and maintenance in Local Area Networks e.t.c."
+    },
+    { 
+        id: 8, 
+        name: "Software Engineering", 
+        images: [
+            "/images/software2.jpg",
+            "/images/software3.jpg",
+            "/images/software1.jpg",
+            "/images/software4.jpg"
+        ],
+        details: "We provide expert software development and engineering services",
+        moreInfo: "Our skilled technicians handle software development projects and intergrations with other existing systems as well as maintenance."
+    },
+    { 
+        id: 9, 
+        name: "Other Services", 
+        images: [
+            "/images/other2.jpg",
+            "/images/other3.jpg",
+            "/images/other4.jpg"
+        ],
+        details: "We provide expert house renovations, cleaning, painting and capentry.",
+        moreInfo: "We offer these services at affordable prices and gurantee quality work for our clients."
     }
 ];
 

@@ -1,9 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./signup.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { json, Link, useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 
 const Signin = () => {
     const [username, setUsername] = useState("");
@@ -30,15 +29,15 @@ const Signin = () => {
             .then((response) => {
                 if(response.error){
                     setError(response.error);
-                }else{
+                } else {
                     setMsg(response.message);
                     setTimeout(()=>{
-                        localStorage.setItem(Signin, true);
-                        navigate("/")
+                        localStorage.setItem("isSignedIn", true);
+                        navigate("/");
                     }, 2000);
                 }
             }).catch((err) => setError(err.message));
-        }else{
+        } else {
             setError("All fields are required!");
         }
     };
@@ -46,37 +45,40 @@ const Signin = () => {
     return(
         <div className="home">
             <Navbar />
-                <div className="signup-body">
+            <div className="signup-body">
+                <div className="signup-form">
                     <h1>Login</h1>
-                    <p className="label">Username</p>
-                    <input
-                        type="text"
-                        placeholder="enter username"
-                        name="username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                        required/>
-                    <p className="label">Password</p>
-                    <input
-                        type="password"
-                        placeholder="enter password"
-                        name="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required/>
-                    <br />
-                    <button
-                        type="submit"
-                        onClick={handleSubmit}
-                        >Sign In</button>
-                    <br />
+                    {error && <p className="error-msg">{error}</p>}
+                    {msg && <p className="success-msg">{msg}</p>}
+                    <form onSubmit={handleSubmit}>
+                        <p className="label">Username</p>
+                        <input
+                            type="text"
+                            placeholder="Enter username"
+                            name="username"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
+                        />
+                        <p className="label">Password</p>
+                        <input
+                            type="password"
+                            placeholder="Enter password"
+                            name="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                        <button type="submit">Sign In</button>
+                    </form>
                     <Link className="link" to='/signup'>
                         Create an account
                     </Link>
-            <Footer />
+                </div>
             </div>
+            <Footer />
         </div>
-    )
+    );
 }
 
 export default Signin;

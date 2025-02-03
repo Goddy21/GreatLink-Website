@@ -57,6 +57,20 @@ const Services = () => {
             image: "/images/network1.jpg",
             details: "We install and maintain networks such as Local Area Networks e.t.c"
         },
+        { 
+            id: 8, 
+            name: "Software Engineering", 
+            description: "Software development and maintenance", 
+            image: "/images/software1.jpg",
+            details: "We develop various softwares and carry out intergrations and maintanenance."
+        },
+        { 
+            id: 9, 
+            name: "Other services", 
+            description: "House renovations, cleaning, painting and capentry", 
+            image: "/images/other1.jpg",
+            details: "We offer other services as well and guarantee quality output and affordable pricinngs"
+        },
     ];
 
     return (

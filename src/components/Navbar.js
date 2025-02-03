@@ -40,18 +40,8 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/departments" className="nav-links" onClick={closeMobileMenu}>
-                            Departments
-                        </Link>
-                    </li>
-                    <li className="nav-item">
                         <Link to="/services" className="nav-links" onClick={closeMobileMenu}>
                             Services
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to="/accessories" className="nav-links" onClick={closeMobileMenu}>
-                            Accessories
                         </Link>
                     </li>
                     <li>

@@ -24,51 +24,58 @@ body, html {
 /* Signup container */
 .signup-body {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: url('/public/images/b7.jpg') center center/cover no-repeat;
-    background-size: cover;  /* Ensures the background image covers the full page */
-    min-height: 100vh;  /* Full height of the viewport */
+    background-size: cover;
+    min-height: 100vh;
     padding: 20px;
-    flex-grow: 1;  /* Allows this section to expand to take the full height */
+    flex-grow: 1;
+}
+
+/* Signup Form Box */
+.signup-form {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 100px;
 }
 
 /* Header styling */
-.signup-body h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: white;
-    margin-top: 100px;
-    font-weight: 600;
+.signup-form h1 {
+    font-size: 2rem;
+    color: dodgerblue;
+    margin-bottom: 20px;
 }
 
 /* Label styling */
-.signup-body p {
+.label {
     font-size: 1rem;
     margin: 5px 0;
     color: dodgerblue;
+    text-align: left;
 }
 
 /* Input fields styling */
-.signup-body input {
+.signup-form input {
     padding: 12px;
     width: 100%;
-    max-width: 400px;
     margin: 10px 0;
     color: white;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid dodgerblue;
     border-radius: 5px;
     font-size: 1rem;
 }
 
 /* Button styling */
-.signup-body button {
+.signup-form button {
     padding: 12px;
     width: 100%;
-    max-width: 400px;
-    margin: 20px 0;
     border-radius: 5px;
     font-size: 1.2rem;
     border: none;
@@ -76,9 +83,10 @@ body, html {
     background-color: dodgerblue;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: 15px;
 }
 
-.signup-body button:hover {
+.signup-form button:hover {
     background-color: transparent;
     color: dodgerblue;
     border: 2px solid dodgerblue;
@@ -88,13 +96,27 @@ body, html {
 /* Link styling */
 .link {
     color: white;
-    margin-top: 20px;
+    display: block;
+    margin-top: 15px;
     font-size: 1rem;
     text-align: center;
 }
 
 .link:hover {
     text-decoration: underline;
+}
+
+/* Error and Success messages */
+.error-msg {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.success-msg {
+    color: green;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
 }
 
 /* Footer styling */
@@ -126,28 +148,19 @@ footer {
         padding: 20px;
     }
 
-    .signup-body h1 {
+    .signup-form {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .signup-form h1 {
         font-size: 1.8rem;
-    }
-
-    .signup-body input,
-    .signup-body button {
-        max-width: 100%;
-    }
-
-    footer {
-        padding: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    .signup-body h1 {
+    .signup-form h1 {
         font-size: 1.5rem;
-    }
-
-    .signup-body input,
-    .signup-body button {
-        max-width: 100%;
     }
 
     .link {
